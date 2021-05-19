@@ -8,6 +8,7 @@ export const CardWrapper = styled.div`
     width: 350px;
     height: 250px;
     padding: 10px 20px;
+    margin: 20px;
     .text-container {
       height: 80%;
       h1 {

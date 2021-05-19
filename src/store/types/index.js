@@ -1,0 +1,1 @@
+export const TEMPLATES_DATA = "TEMPLATES_DATA";

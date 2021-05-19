@@ -16,19 +16,6 @@ function Index({ data }) {
           <a href={`${link}`}>use template</a>
         </div>
       </div>
-
-      {/* 
-{data.map(({ description, link, name }) => (
-        <div key={Math.random() * (100 - 10 + 1)} className="card-container">
-          <div className="text-container">
-            <h1>{truncate(name, 40)}</h1>
-            <p>{truncate(description, 60)}</p>
-          </div>
-          <div className="link-box">
-            <a href={`${link}`}>use template</a>
-          </div>
-        </div>
-      ))} */}
     </CardWrapper>
   );
 }
