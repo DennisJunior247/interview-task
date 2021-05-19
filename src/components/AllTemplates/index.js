@@ -3,7 +3,6 @@ import CardTemplate from "../CardTemplate/index";
 import { AllTemplateWrapper } from "./styles";
 import Pagination from "../paginator/index";
 function Index() {
-
   const data = [
     {
       name: "laborum. exercitation cupidatat",
@@ -36,15 +35,12 @@ function Index() {
         <h3>All Templates</h3>
         <h3>2000 templates</h3>
       </div>
-
-      {/* <CardTemplate data={data} /> */}
       <Pagination
-            data={data}
-            RenderComponent={CardTemplate}
-            // title="Posts"
-            pageLimit={5}
-            dataLimit={10}
-          />
+        data={data}
+        RenderComponent={CardTemplate}
+        pageLimit={5}
+        dataLimit={10}
+      />
     </AllTemplateWrapper>
   );
 }
