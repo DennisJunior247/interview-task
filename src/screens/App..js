@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "../components/Header";
-import AllTemplate from "../components/AllTemplates";
+import AllTemplates from "../components/AllTemplates";
 
-function homeScreen() {
+function App() {
   return (
     <div>
       <Header />
-      <AllTemplate />
+      <AllTemplates />
     </div>
   );
 }
 
-export default homeScreen;
+export default App;
