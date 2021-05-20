@@ -28,7 +28,7 @@ export const PageLoaderBox = styled('div')`
   .ripple div {
     position: absolute;
     border: ${({ theme, color }) =>
-      `4px solid ${color ? color : "blue"}`};
+      `4px solid ${color ? color : "#08bd37"}`};
     opacity: 1;
     border-radius: 50%;
     animation: ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;

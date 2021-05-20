@@ -5,7 +5,11 @@ export const HeaderWrapper = styled.div`
   display: flex;
   margin-top: 50px;
   flex-direction: column;
-
+  .sub-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+  }
   .filter-box {
     padding-bottom: 10px;
     align-items: center;

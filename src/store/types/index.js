@@ -1,1 +1,2 @@
 export const TEMPLATES_DATA = "TEMPLATES_DATA";
+export const CATEGORY_DATA = "TEMPLATES_DATA";

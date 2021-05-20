@@ -1,7 +1,7 @@
 import React from "react";
 import { CardWrapper } from "./styles";
 import { truncate } from "../../utils/utilFuc";
-// import Pagination from "../paginator/index";
+
 
 function Index({ data }) {
   const { name, description, link } = data;
@@ -13,7 +13,9 @@ function Index({ data }) {
           <p>{truncate(description, 60)}</p>
         </div>
         <div className="link-box">
-          <a href={`${link}`}>use template</a>
+          <a target="blank" href={`${link}`}>
+            use template
+          </a>
         </div>
       </div>
     </CardWrapper>

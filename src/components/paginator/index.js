@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PaginatorWrapper } from "./styles";
 
 const Pagination = ({ data, RenderComponent, pageLimit, dataLimit }) => {
@@ -17,13 +17,19 @@ const Pagination = ({ data, RenderComponent, pageLimit, dataLimit }) => {
     const endIndex = startIndex + dataLimit;
     return data.slice(startIndex, endIndex);
   };
-
+  useEffect(() => {
+    window.scrollTo({ behavior: "smooth", top: "0px" });
+  }, [currentPage]);
   return (
     <PaginatorWrapper>
       <div className="dataContainer">
-        {getPaginatedData().map((d, idx) => (
-          <RenderComponent key={idx} data={d} />
-        ))}
+        {getPaginatedData().length > 0 ? (
+          getPaginatedData().map((d, idx) => (
+            <RenderComponent key={idx} data={d} />
+          ))
+        ) : (
+          <p>No Data</p>
+        )}
       </div>
       <div className="pagination">
         <div
@@ -34,7 +40,8 @@ const Pagination = ({ data, RenderComponent, pageLimit, dataLimit }) => {
         </div>
 
         <div>
-          <span className="active-page">{currentPage}</span> of <span>{pageLimit}</span>
+          <span className="active-page">{currentPage}</span> of{" "}
+          <span>{pageLimit}</span>
         </div>
 
         <div

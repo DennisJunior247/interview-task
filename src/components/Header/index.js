@@ -3,23 +3,55 @@ import { HeaderWrapper } from "./styles";
 import { DropdownModal } from "../DropdownMenu/index";
 import SearchBox from "../SearchBox/index";
 import { Svg } from "../../assets/svg/index";
-const Header = () => {
+// import { GlobalContext } from "../../store/provider";
+
+const Header = ({ data, onClick }) => {
+  // const { state, dispatch } = useContext(GlobalContext);
+
+  // const changeCtg = (ctg) => {
+  //   {
+  //     ctg === "all"
+  //       ? [setProductsCtg(initialState), setActive(true)]
+  //       : [
+  //           setProductsCtg(
+  //             products.filter((i) => i.category._id === ctg),
+  //             setActive(true)
+  //           ),
+  //         ];
+  //   }
+  // };
+
   const dropDown = [
-    { list: "all" },
+    { list: "Default" },
     { list: "Education" },
     { list: "E-commerce" },
     { list: "Health" },
   ];
+  const Order = [
+    { list: "Default" },
+    { list: "Ascending" },
+    { list: "Descending" },
+  ];
+  const Date = [
+    { list: "Default" },
+    { list: "Ascending" },
+    { list: "Descending" },
+  ];
+
+  //   const dd = state.templatesData
+  //   .slice()
+  //   .sort((a, b) => new Date(a.date) - new Date(b.date));
+  // console.log(dd, "data");
 
   return (
     <HeaderWrapper>
       <div className="filter-box">
         <div className="search-container">
-          <SearchBox />
+          <SearchBox onchange={onClick} />
         </div>
         <div className="dropDown-container">
           <DropdownModal
-            initial="All"
+            initial="Default"
             dropBk="#fff"
             dropHovBk="#fafafa"
             className="dropdown"
@@ -34,26 +66,26 @@ const Header = () => {
             }}
           />
           <DropdownModal
-            initial="All"
+            initial="Default"
             dropBk="#fff"
             dropHovBk="#fafafa"
             className="dropdown"
-            dropDownData={dropDown}
+            dropDownData={Order}
             dropCol="#4D4D4C"
             selectedWeight="normal"
             selectedColor="#3F3F3F"
             dropDownName={"order"}
             left
             click={(selected) => {
-              console.log("selected");
+              console.log("dennis");
             }}
           />
           <DropdownModal
-            initial="All"
+            initial="Default"
             dropBk="#fff"
             dropHovBk="#fafafa"
             className="dropdown"
-            dropDownData={dropDown}
+            dropDownData={Date}
             dropCol="#4D4D4C"
             selectedWeight="normal"
             selectedColor="#3F3F3F"
@@ -75,6 +107,10 @@ const Header = () => {
             looking for? Search from the 1000+ available templates
           </p>
         </div>
+      </div>
+      <div className="sub-header">
+        <h3>All Templates</h3>
+        <h3>{`${data.length} ${"templates"}`}</h3>
       </div>
     </HeaderWrapper>
   );

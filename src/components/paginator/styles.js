@@ -5,7 +5,7 @@ export const PaginatorWrapper = styled.div`
     padding: 5px 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .pagination {
     display: flex;

@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { DropdownModalBox } from "./styles";
-import {
-  RiArrowDownSLine as UpArrow,
-  //   RiArrowUpSLine as DownArrow,
-  //   RiCheckLine as Tick,
-} from "react-icons/ri";
+import { RiArrowDownSLine as UpArrow } from "react-icons/ri";
 import { truncate } from "../../utils/utilFuc";
 
 export const DropdownModal = ({

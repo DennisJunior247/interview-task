@@ -9,6 +9,11 @@ export const CardWrapper = styled.div`
     height: 250px;
     padding: 10px 20px;
     margin: 20px;
+    transition: transform 0.5s ease, opacity 0.5s ease-out,
+      box-shadow 0.3s ease-in;
+    &:hover {
+      transform: scale(1.1);
+    }
     .text-container {
       height: 80%;
       h1 {
