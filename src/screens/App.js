@@ -4,6 +4,9 @@ import AllTemplates from "../components/AllTemplates";
 import { PageLoader } from "../components/Loaders";
 import { GlobalContext } from "../store/provider/index";
 import { TEMPLATES_DATA } from "../store/types/index";
+
+
+
 const App = () => {
   const [isLoading, setIsloading] = useState(false);
   const [error, setError] = useState(false);
@@ -33,20 +36,6 @@ const App = () => {
     setIsloading(true);
     getTemplates();
   }, [getTemplates]);
-
-  // const onClick = (selected) => {
-  //   if (selected === "Default") {
-  //     state.templatesData.slice().sort();
-  //   } else if (selected === "Ascending") {
-  //     state.templatesData.slice().sort((a, b) => a.date - b.date);
-  //   } else if (selected === "Descending") {
-  //     state.templatesData.slice().sort((a, b) => b.date - a.date);
-  //   }
-  // };
-
-  // const updateSearch = (e) => {
-  //   setSearch(e.target.value.toLowerCase());
-  // };
 
   const filterSearch = (e) => {
     if (e.target.value.toLowerCase()) {

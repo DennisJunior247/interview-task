@@ -5,7 +5,7 @@ import Pagination from "../paginator/index";
 
 function Index({ data }) {
   return (
-    <AllTemplateWrapper>
+    <AllTemplateWrapper data-testid="allTemplate">
       <Pagination
         data={data}
         RenderComponent={CardTemplate}

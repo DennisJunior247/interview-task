@@ -3,23 +3,8 @@ import { HeaderWrapper } from "./styles";
 import { DropdownModal } from "../DropdownMenu/index";
 import SearchBox from "../SearchBox/index";
 import { Svg } from "../../assets/svg/index";
-// import { GlobalContext } from "../../store/provider";
 
-const Header = ({ data, onClick }) => {
-  // const { state, dispatch } = useContext(GlobalContext);
-
-  // const changeCtg = (ctg) => {
-  //   {
-  //     ctg === "all"
-  //       ? [setProductsCtg(initialState), setActive(true)]
-  //       : [
-  //           setProductsCtg(
-  //             products.filter((i) => i.category._id === ctg),
-  //             setActive(true)
-  //           ),
-  //         ];
-  //   }
-  // };
+const Header = ({ data, onClick, }) => {
 
   const dropDown = [
     { list: "Default" },
@@ -37,11 +22,6 @@ const Header = ({ data, onClick }) => {
     { list: "Ascending" },
     { list: "Descending" },
   ];
-
-  //   const dd = state.templatesData
-  //   .slice()
-  //   .sort((a, b) => new Date(a.date) - new Date(b.date));
-  // console.log(dd, "data");
 
   return (
     <HeaderWrapper>
@@ -77,7 +57,7 @@ const Header = ({ data, onClick }) => {
             dropDownName={"order"}
             left
             click={(selected) => {
-              console.log("dennis");
+              console.log("selected");
             }}
           />
           <DropdownModal
