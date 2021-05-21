@@ -24,4 +24,4 @@ context api instead of redux - The project is not that large to use a heavy lib 
 the sortby functionality is not working because i belive that the api should provide a query string where the sort queries will be passed in other to sortby
 
 ### `Deployed link`
-see there []
+see here [https://interview-task-gray.vercel.app/]
