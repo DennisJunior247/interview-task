@@ -9,7 +9,7 @@ export const CardWrapper = styled.div`
     height: 250px;
     padding: 10px;
     margin: 20px;
-    @media (max-width: 50px) {
+    @media (max-width: 500px) {
       width: 94%;
       justify-content: center;
       width: 250px;
