@@ -7,9 +7,14 @@ export const CardWrapper = styled.div`
     border-radius: 2px;
     width: 350px;
     height: 250px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-left: 20px;
+    padding: 10px;
+    margin: 20px;
+    @media (max-width: 50px) {
+      width: 94%;
+      justify-content: center;
+      width: 250px;
+      height: 250px;
+    }
     transition: transform 0.5s ease, opacity 0.5s ease-out,
       box-shadow 0.3s ease-in;
     &:hover {
