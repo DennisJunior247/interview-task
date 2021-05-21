@@ -2,10 +2,16 @@ import styled from "styled-components";
 
 export const PaginatorWrapper = styled.div`
   .dataContainer {
-    padding: 5px 30px;
+    /* padding: 5px 30px; */
+    /* margin-left: 5px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    @media (max-width: 950px) {
+      width: 94%;
+      justify-content: center;
+
+    }
   }
   .pagination {
     display: flex;

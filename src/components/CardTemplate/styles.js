@@ -8,7 +8,8 @@ export const CardWrapper = styled.div`
     width: 350px;
     height: 250px;
     padding: 10px 20px;
-    margin: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
     transition: transform 0.5s ease, opacity 0.5s ease-out,
       box-shadow 0.3s ease-in;
     &:hover {

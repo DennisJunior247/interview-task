@@ -1,4 +1,3 @@
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -17,11 +16,14 @@ Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `Technologies used `
+
 styled components - same with emotionjs(css in js)
 context api instead of redux - The project is not that large to use a heavy lib like redux, the context architecture is redux like still.
+
 ### `isues encountered`
 
-the sortby functionality is not working because i belive that the api should provide a query string where the sort queries will be passed in other to sortby
+The sortby functionality is not working because i belive that the api should provide a query where the sort queries will be passed in other to sortby , which was't provided
 
 ### `Deployed link`
+
 see there []
