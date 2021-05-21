@@ -12,7 +12,7 @@ export const CardWrapper = styled.div`
     @media (max-width: 500px) {
       width: 94%;
       justify-content: center;
-      width: 250px;
+      width: 330px;
       height: 250px;
     }
     transition: transform 0.5s ease, opacity 0.5s ease-out,
@@ -26,9 +26,15 @@ export const CardWrapper = styled.div`
         font-size: 30px;
         color: #333447;
         font-weight: bolder;
+        @media (max-width: 500px) {
+          font-size: 20px;
+        }
       }
       p {
         font-size: 18px;
+        @media (max-width: 500px) {
+          font-size: 15px;
+        }
       }
     }
   }
